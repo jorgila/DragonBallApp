@@ -1,6 +1,7 @@
 package com.jorgila.dragonballapp.data.remote
 
 import co.touchlab.kermit.Logger
+import com.jorgila.dragonballapp.data.remote.response.CharacterResponse
 import com.jorgila.dragonballapp.data.remote.response.CharactersWrapperResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -22,5 +23,13 @@ class ApiService(
         }
     }
 
+    suspend fun getDetailCharacter(id: Int) : CharacterResponse? {
+        return try {
+            client.get("/api/characters/$id").body()
+        } catch (e: Exception) {
+            Logger.e { "Error API Services -> ${e.message}" }
+            return null
+        }
+    }
 
 }
