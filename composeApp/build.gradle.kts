@@ -23,6 +23,8 @@ kotlin {
             implementation(libs.koin.androidx.compose)
             // KTOR
             implementation(libs.ktor.client.okHttp)
+            // COIL
+            implementation(libs.image.coil)
         }
         commonMain.dependencies {
             implementation(compose.runtime)

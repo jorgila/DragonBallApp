@@ -11,6 +11,7 @@
 		0F17C98F2E7FF09C002186F0 /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0F17C98E2E7FF09C002186F0 /* KMPNativeCoroutinesCore */; };
 		0F17C9922E7FF111002186F0 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0F17C9912E7FF111002186F0 /* KMPObservableViewModelCore */; };
 		0F17C9942E7FF111002186F0 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0F17C9932E7FF111002186F0 /* KMPObservableViewModelSwiftUI */; };
+		0F17C99F2E8011DB002186F0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0F17C99E2E8011DB002186F0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 				0F17C9942E7FF111002186F0 /* KMPObservableViewModelSwiftUI in Frameworks */,
 				0F17C98D2E7FF09C002186F0 /* KMPNativeCoroutinesAsync in Frameworks */,
 				0F17C9922E7FF111002186F0 /* KMPObservableViewModelCore in Frameworks */,
+				0F17C99F2E8011DB002186F0 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,7 @@
 				0F17C98E2E7FF09C002186F0 /* KMPNativeCoroutinesCore */,
 				0F17C9912E7FF111002186F0 /* KMPObservableViewModelCore */,
 				0F17C9932E7FF111002186F0 /* KMPObservableViewModelSwiftUI */,
+				0F17C99E2E8011DB002186F0 /* Kingfisher */,
 			);
 			productName = iosApp;
 			productReference = 9A234306F6D9D3F58B2ED9F3 /* DragonBallApp.app */;
@@ -132,6 +135,7 @@
 			packageReferences = (
 				0F17C98B2E7FF09C002186F0 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
 				0F17C9902E7FF111002186F0 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
+				0F17C99D2E8011DB002186F0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 778F2C3A4EF754953E6D23B5 /* Products */;
@@ -405,6 +409,14 @@
 				version = "1.0.0-BETA-14";
 			};
 		};
+		0F17C99D2E8011DB002186F0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -427,6 +439,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F17C9902E7FF111002186F0 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelSwiftUI;
+		};
+		0F17C99E2E8011DB002186F0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F17C99D2E8011DB002186F0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
