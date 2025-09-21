@@ -24,7 +24,7 @@ struct HomeScreen: View {
                     ScrollView{
                         LazyVStack{
                             ForEach(viewModel.characters,id:\.self){ character in
-                                NavigationLink(destination: {}){
+                                NavigationLink(destination: {DetailScreen(id: character.id)}){
                                     CharacterItem(item: character)
                                 }
                             }
