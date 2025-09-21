@@ -11,8 +11,10 @@ import org.koin.androidx.compose.koinViewModel
 fun HomeScreen(
 ) {
     val viewModel: HomeViewModel = koinViewModel()
-    val example by viewModel.example.collectAsState()
+    val example by viewModel.characters.collectAsState()
     Column {
-        Text(text = example)
+        example.forEach {
+            Text(text = it.name )
+        }
     }
 }
