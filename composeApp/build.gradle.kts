@@ -21,6 +21,8 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             // KOIN
             implementation(libs.koin.androidx.compose)
+            // KTOR
+            implementation(libs.ktor.client.okHttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)

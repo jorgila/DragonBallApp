@@ -10,5 +10,6 @@ plugins {
     alias(libs.plugins.ksp) apply false
     // KMP NATIVE COROUTINES
     alias(libs.plugins.kmpNativeCoroutines) apply false
-
+    // SERIALIZATION
+    alias(libs.plugins.kotlinxSerialization) apply false
 }

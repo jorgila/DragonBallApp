@@ -7,7 +7,8 @@ plugins {
     alias(libs.plugins.ksp)
     // KMP NATIVE COROUTINES
     alias(libs.plugins.kmpNativeCoroutines)
-
+    // SERIALIZATION
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -33,11 +34,23 @@ kotlin {
             languageSettings.optIn("kontlinx.cinterop.ExperimentalObjCName")
         }
         commonMain.dependencies {
+            // DI
             implementation(libs.koin.core)
+            // VIEW MODEL
             api(libs.kmp.observable.viewmodel)
+            // KTOR
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negociation)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            // LOGS
+            implementation(libs.logs.kermit)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
