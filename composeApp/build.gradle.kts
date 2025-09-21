@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    // SERIALIZATION
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -25,6 +27,9 @@ kotlin {
             implementation(libs.ktor.client.okHttp)
             // COIL
             implementation(libs.image.coil)
+            //NAVIGATION
+            implementation(libs.android.compose.navigation)
+            implementation(libs.jetbrains.serialization)
         }
         commonMain.dependencies {
             implementation(compose.runtime)

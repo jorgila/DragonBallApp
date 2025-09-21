@@ -34,6 +34,10 @@ kermit = "2.0.8"
 # COIL
 coil = "2.7.0"
 
+# NAVIGATION
+nav = "2.9.4"
+serialization = "1.9.0"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -66,6 +70,10 @@ logs-kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 # COIL
 image-coil = { module = "io.coil-kt:coil-compose", version.ref = "coil"}
+
+# NAVIGATION
+android-compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "nav" }
+jetbrains-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

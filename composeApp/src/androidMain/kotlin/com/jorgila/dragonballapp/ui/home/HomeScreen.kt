@@ -45,6 +45,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun HomeScreen(
+    navigateToDetail: (Int) -> Unit
 ) {
     val viewModel: HomeViewModel = koinViewModel()
     val characters by viewModel.characters.collectAsState()
@@ -65,7 +66,9 @@ fun HomeScreen(
             contentPadding = PaddingValues(16.dp, vertical = 32.dp)
         ) {
             items(characters) { character ->
-                CharacterItem(character){}
+                CharacterItem(character){ item ->
+                    navigateToDetail(item.id)
+                }
             }
         }
     }
