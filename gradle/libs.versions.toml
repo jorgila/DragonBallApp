@@ -13,6 +13,18 @@ composeMultiplatform = "1.9.0"
 junit = "4.13.2"
 kotlin = "2.2.20"
 
+# VIEW MODEL
+kmpObservableViewmodel = "1.0.0-BETA-14"
+
+# COROUTINES
+kmpNativeCoroutines = "1.0.0-ALPHA-47"
+
+# KOIN
+koin = "4.1.1"
+
+# KSP
+ksp = "2.2.20-2.0.2"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -25,9 +37,23 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 
+# VIEW MODEL
+kmp-observable-viewmodel = { module = "com.rickclephas.kmp:kmp-observableviewmodel-core", version.ref = "kmpObservableViewmodel"}
+
+# DI
+
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin"}
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin"}
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+# COROUTINES
+kmpNativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmpNativeCoroutines"}
+
+# KSP
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}

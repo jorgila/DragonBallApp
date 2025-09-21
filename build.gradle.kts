@@ -6,4 +6,9 @@ plugins {
     alias(libs.plugins.composeMultiplatform) apply false
     alias(libs.plugins.composeCompiler) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
+    // KSP
+    alias(libs.plugins.ksp) apply false
+    // KMP NATIVE COROUTINES
+    alias(libs.plugins.kmpNativeCoroutines) apply false
+
 }
